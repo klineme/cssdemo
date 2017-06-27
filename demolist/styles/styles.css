@@ -13,3 +13,11 @@ body{
 .fizzbuzz{
     background-color: #0000FF
 }
+
+li{
+    opacity: .75;
+}
+li:hover{
+    opacity: 1;
+}
+/*Bootsrap*/

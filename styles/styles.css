@@ -5,6 +5,12 @@
         ul {background-color: #FF0000}
         #mystyle{background-color: #123456}
         .mystyle{background-color: #459930}
+        div {
+                background-color: #0FF0FF !important;
+                height: 10%;
+                width: 1em;
+                border: 1px;
+        }
         /*Can combine, for example:*/
         h4.notpurple {background-color: #00FF00}
         /*All h4s with the class notpurple has green bg*/
@@ -18,5 +24,10 @@
         div P {background color: #00FF00}
 
         /*Pseudo selector*/
-        table:hover {} /*When someone hovers*/
-        table:active{} /*Click on the table*/
+        table:hover {background-color: #000000} /*When someone hovers*/
+        table:active{background-color: #ABCDEF} /*Click on the table*/
+        ul:first{}
+        ul:last{}
+        /*Attribute*/
+        /*Element[attr="value"]*/
+        div[class="note"]{ color: #FFFF00}

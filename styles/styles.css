@@ -5,3 +5,14 @@
         ul {background-color: #FF0000}
         #mystyle{background-color: #123456}
         .mystyle{background-color: #459930}
+        /*Can combine, for example:*/
+        h4.notpurple {background-color: #00FF00}
+        /*All h4s with the class notpurple has green bg*/
+        /*!important tag will make a rule override any other rule*/
+
+        /*Child Elements: ONLY DIRECT CHILDREN*/ 
+        ul > li {background color: blueviolet}
+
+        /*Descendant: Everything descending from a div*/
+
+        div P {background color: #00FF00}

@@ -1,0 +1,15 @@
+body{
+    border: 1px solid #000000;
+}
+
+.fizz {
+    background-color: #00FF00
+}
+
+.buzz {
+    background-color: #FF00FF
+}
+
+.fizzbuzz{
+    background-color: #0000FF
+}

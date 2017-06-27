@@ -16,3 +16,7 @@
         /*Descendant: Everything descending from a div*/
 
         div P {background color: #00FF00}
+
+        /*Pseudo selector*/
+        table:hover {} /*When someone hovers*/
+        table:active{} /*Click on the table*/

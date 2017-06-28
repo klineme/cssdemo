@@ -3,7 +3,7 @@ var c = console;
 
 window.onload = function(){
     var list = document.getElementById("Useless");
-    list.addEventListener("dblclick", /* need listener func*/ function(event){
+    list.addEventListener("click", /* need listener func*/ function(event){
         c.log(event.target);
     });
 }

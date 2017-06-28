@@ -1,0 +1,24 @@
+events:
+
+elem.addeventlistener(string, fn(){})
+ ex:
+
+btn.addeventlistener("click", fn(event){
+    event.preventDefault();
+    var x = event.target; -> Will return target if there were multiples
+}
+event bubbling: when the parent captures the event rather than the child
+HOISTING!@?!@!?@?!@!@!@!?@?
+var i = 1;
+
+fn(){
+    var i = 2; LOCAL TO THIS FUNCTION
+    c.log(i);
+}
+
+vvvv
+
+fn(){
+    c.log(i); i is undefined because it's being HOISTED, being declated before
+    var i = 2;
+}

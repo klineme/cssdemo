@@ -22,7 +22,12 @@ window.onload = function(){
             if(left && right){
                 var rint = parseInt(right);
                 var lint = parseInt(left);
-                result = lint + rint;
+                if(op == "+"){
+                    result = lint + rint;
+                }
+                if(op == "-"){
+                    result = lint - rint;
+                }
                 dsp += result.toString();
                 done = true;
             }
@@ -31,9 +36,10 @@ window.onload = function(){
                 return;
             }
         }
-        else if(btn == "+" /*|| btn == "-"*/){
+        else if(btn == "+" || btn == "-"){
             if(!left){
                 op = "";
+                dsp = "";
                 return;
             }
             op = btn;

@@ -18,7 +18,7 @@ window.onload = function(){
         //c.log(btn);
         if(btn.length > 1) return;
         else dsp += btn;
-        c.log(btn);
+        // c.log(btn);
         if(btn == "c"){
             dsp = "";
             left = ""; //left side of op

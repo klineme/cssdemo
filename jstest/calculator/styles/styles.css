@@ -1,9 +1,0 @@
-table {
-    border: 1px solid #000000;
-}
-
-td:hover{background-color: #1BCDEF} /*Click on the table*/
-td:active {
-    background-color: #000000;
-    color: #FFFFFF;
-} /*When someone hovers*/

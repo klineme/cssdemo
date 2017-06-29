@@ -5,7 +5,14 @@ window.onload = function(){
 
     thepromise.then(function(data){
         c.log(data);
-    })
+    });
+    getObject(0).then(function(timer){
+        c.log(timer.counter);
+        timer.addToCount(1);
+        c.log(timer.counter);
+        timer.addToCount(2);
+        c.log(timer.counter);                    
+    });
 }
 
 function getPromise(msg){
@@ -13,4 +20,10 @@ function getPromise(msg){
         res(msg+ " promise resolved");
     });
     return val;
+}
+
+function getObject(count){
+    return new Promise(function(res, rej){
+        res({counter: count, addToCount: function(x){this.counter+=x;}})
+    });
 }

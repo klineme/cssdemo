@@ -22,3 +22,18 @@ fn(){
     c.log(i); i is undefined because it's being HOISTED, being declated before
     var i = 2;
 }
+
+AJAX
+
+Asynchronous JS and XML
+
+Basic IDEA: DOn't need to
+refresh the whole damn page
+every time it neds to update
+
+xmlhttprequest
+xhr
+Message Envelope
+(don't just send username, send a whole msg)
+COMMON HTTP VERBS
+    GET, POST, PUT, DELETE

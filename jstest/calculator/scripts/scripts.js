@@ -18,8 +18,19 @@ window.onload = function(){
         //c.log(btn);
         if(btn.length > 1) return;
         else dsp += btn;
-
+        c.log(btn);
+        if(btn == "c"){
+            dsp = "";
+            left = ""; //left side of op
+            op = ""; //operator string buffer
+            right = ""; //right side of op
+            result = 0;
+            done = false;
+            display.innerHTML = "0"
+            return;
+        }
         if(btn == "="){
+            if(done) left = result.toString();
             if(left && right){
                 var rint = parseInt(right);
                 var lint = parseInt(left);

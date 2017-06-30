@@ -73,3 +73,16 @@ xhr.onreadystatechange = fn(){
 }
 xhr.open("Action", url, isAsync)
 xhr.send(datatoserver)
+
+var ajaxApp = (fn(){ how to make private stufffffff
+    var privatevar = "hello";
+    var url = ...
+return {PublicVar: privateVar,
+        get pokechar = getchar()}
+
+fn main(a){
+
+    main(window.ajaxApp)
+}
+
+})();

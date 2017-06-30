@@ -37,3 +37,39 @@ Message Envelope
 (don't just send username, send a whole msg)
 COMMON HTTP VERBS
     GET, POST, PUT, DELETE
+
+    GET - ready
+    POST - write, update
+    PUT - insert, write, update (A little more safe)
+    DELETE
+
+.setRequestHeaders("Accept", "application/json")
+                                content type
+    Headers
+        Content Type:
+
+
+Error code ranges
+
+MLHTTPrequest.status ?
+100 - info
+200 - success
+300 - redirect
+400 - client-side
+500 - server-side
+
+.readyState
+0 - init
+1 - just sent it
+2 - Headers of msg received
+3 - Server received message (payload)
+4 - done, complete (succeeded or failed)
+
+var xhr = new___();
+if(xhr.readdyState == 4 && xhr.status == 200)
+
+xhr.onreadystatechange = fn(){
+
+}
+xhr.open("Action", url, isAsync)
+xhr.send(datatoserver)

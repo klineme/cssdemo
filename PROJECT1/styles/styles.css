@@ -4,3 +4,7 @@
 .short {
     width: 40px
 }
+
+.titleshadow {
+    text-shadow: 2px 2px #999999;
+}

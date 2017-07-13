@@ -7,22 +7,25 @@ window.onload = function(){
             //setup event listener on the menu
             document.getElementById("MenuCart").addEventListener("click", function(event){
                 var clicked = event.target;
-                if(clicked.className == "AddToCart"){
+                if(clicked.className == "btn-xs AddToCart"){ //If addtocart is clicked
+                    //Figure out what was clicked on by parsing internal html text
                     var itemNode = clicked.parentNode.parentNode;
                     //Had to clean up leftover space and endlines
                     var itemArr = (itemNode.innerText.split('\n'))[0].split(" ");
                     var item = itemArr[0] + " " + itemArr[1];
+
                     var quantityNode = clicked.previousElementSibling;
                     var quantity = parseInt(quantityNode.value);
+
                     var priceString = clicked.parentNode.innerText;
-                    //remove $
+                    //remove the $ and make it a number
                     var price = parseFloat(priceString.substr(1)).toFixed(2);
 
                     //Finally add to CartModule
                     CartMod.addItem(item, quantity, price);
                     
                 }
-                if(clicked.className == "Remove"){
+                if(clicked.className == "Remove btn-xs btn-danger"){
                     var itemNode = clicked.parentNode.parentNode;
                     //Same as above
                     var itemArr = (itemNode.innerText.split('\n'))[0].split(" ");
@@ -45,20 +48,19 @@ function updateTotal(total){
     totalNode = document.getElementById("Total");
     totalNode.innerText = "CART TOTAL: $" + total.toString();
     totalNode.setAttribute("class", "container cntr");
-    c.log(totalNode.firstChild.firstChild);
 }
 
 function constructMenu(MenuArray){
     for(i = 0; i < MenuArray.length; i++){
         //A lot of DOM stuff needs to be added
         var inputNode = document.createElement("input");
-        inputNode.setAttribute("class", "short");
+        inputNode.setAttribute("class", "short input-group-sm");
         inputNode.setAttribute("type", "number");
         inputNode.setAttribute("value", "1");
 
         var buttonNode = document.createElement("button");
         buttonNode.innerText = "Add to Cart";
-        buttonNode.setAttribute("Class", "AddToCart");
+        buttonNode.setAttribute("Class", "btn-xs AddToCart");
 
         var priceNode = document.createElement("div");
         priceNode.innerHTML = "$" + (MenuArray[i].Price).toString() + "<br/>";
@@ -84,7 +86,6 @@ function cleanCartNodes(CartArray){ //Specifically for when I delete nodes
     for(i = 0; i < CartArray.length; i++){
         var doesExist = document.getElementById("cartNode"+i.toString());
         if(doesExist){
-            c.log(CartArray);
             doesExist.parentNode.removeChild(doesExist);
         }
     }    
@@ -96,7 +97,7 @@ function constructCart(CartArray, max){
 
         var buttonNode = document.createElement("button");
         buttonNode.innerText = "Remove";
-        buttonNode.setAttribute("Class", "Remove");
+        buttonNode.setAttribute("Class", "Remove btn-xs btn-danger");
 
         var priceNode = document.createElement("div");
         priceNode.innerHTML = "$" + (CartArray[i].Price).toString() + "<br/>";

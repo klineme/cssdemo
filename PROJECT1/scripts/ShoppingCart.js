@@ -17,7 +17,6 @@ window.ShoppingCart = (function(){
         //If item is already in cart, add specified quantity to cart
         var found = false;
         for(i = 0; i < CartArray.length; i++){
-               // c.log(CartArray[i].Item);
             if(CartArray[i].Item == dish){
                 CartArray[i].Quantity += quantity;
                 found = true;
@@ -27,11 +26,10 @@ window.ShoppingCart = (function(){
         if(!found)
             CartArray.push(new cartItem(dish, quantity, price));
     }
-    function getCart(){
+    function getCart(){ //Getter for the array
         return CartArray;
     }
-    function removedish(dish){
-        c.log(CartArray);
+    function removedish(dish){ //Searches for dish to remove
         for(i = 0; i < CartArray.length; i++){
             if(CartArray[i].Item == dish){
                 CartArray.splice(i, 1);
@@ -41,7 +39,7 @@ window.ShoppingCart = (function(){
         return -1;
 
     }
-    function calctotal(){
+    function calctotal(){ // Calculates total amount
         var total = 0;
         if (CartArray.length == 0)
             return total.toFixed(2);

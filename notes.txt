@@ -86,3 +86,123 @@ fn main(a){
 }
 
 })();
+
+Relationships:
+
+One to one, many to one, many to many
+
+many to many needs intermediate or junction table
+
+joins:
+
+inner join, left/right outer join, self join
+
+(natural join, equi join)
+
+venn diagram, inner join is shared in the middle, left outer is left side plus center
+right outer join is right plus center
+
+self join, joins itself
+
+Normalization:
+
+1 NF - Each column needs one value each, can be repeated values though
+2 NF - No duplicate data, partial dependencies, use foreign key for classes(courses)
+3 NF - No transitive dependences, Every column should only depend on primary key
+BCNF - 
+4 NF
+5 NF
+6 NF
+
+View: Just a view of a few categories in a table, can include different tables
+create view BookInfo
+As
+ select title, author, genre, etc
+from Books
+
+Stored Procedures: Pretty much like functions/methods
+- Reuse
+- Speed - Usually faster since it runs database side
+- Mostly for selects
+
+TRANSACTIONS: -- INTERVIEW QUESTIONSSSNFKLSNDLKNFSLDK
+
+- Similar to stored Procedures
+- Single unit of work. Either all lines get executed or none get executed at all
+- Prevents possibility of corruptions that you can get in stored procedures
+
+ACID::::::
+Atomicity - roll back like restore if something happens, all or nothing
+Consistency - don't get corrupt data, or not in a partial state
+Isolation - Synchronous
+Durability - Related to Consistency, sort of like a save point.
+
+
+Interview notes:
+
+WCF Lifecycle
+REST Lifecycle
+AJAX
+Practicing responses?!
+
+Functions: Can call within other sql objects like transactions and stored procedures
+Aggregate functions----
+Performs functionality on data and returns one value
+    -sum()
+Scalar functions -- Sends one value, returns one value
+    -INC()
+
+Triggered! (Triggers)- Calls before event happens
+Useful? SURE - Logging, logic checking, etc
+
+Indexing -- GOod compared to a book, good for faster searches
+- Points to frequently looked up stufffffff
+    Clustered - can have one.. -Sort order of the table
+    Non-Clustered - can have many.. -Grouping in different type of category
+
+Unit Testing (BACK TO C#)
+    -How to verify the performance of your methods
+POSITIVE Testing
+NEgative Testing
+
+    Arrange -- Mock up data
+        int i = 1, int x = 2;
+    Act -- DO IT
+        int y = Add(i,x);
+    Assert -- actually a method
+        - Assert(2, y); (should return true or false depending)
+
+WUT IS TDD
+    - Writing unit test before writing code
+Same square brackets stufffffff
+[TestClass]
+[TestMethod]
+[TestInitializer]
+[TestCleanUp]
+
+ADO.NET:::FF::F:
+Important: COnnection String -Contains info on database
+    -Database name
+    -Endpoint server
+    -Data provider
+        -SQLclient
+        -OLeDB
+    -Security
+ARCHITECTURE:
+COnnected - Data Reader, keeps connection live until it completes reading - returns one row at a time
+Disconnected - Data Adapter, connection gets closed immediately, grabs all data at once - returns whole data set
+    Data Set - Data Table inside of it
+
+ORM - OBject relational mapping
+EDM - Entity data model
+edmx
+dbContext
+
+EF - ENTITY FRAMEWORK
+    - Lazy Loading - Asynchronous
+    - Eager Loading - Synchronous
+
+SETTING IT up
+    - Database first
+    - Code first
+    - Model first

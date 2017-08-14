@@ -1,0 +1,45 @@
+Design Patterns
+    -Philosophy you adapt to solve  many problems
+    -enum
+    -Singleton - Only one instance of this class at a time
+    -Factory - Constructs other classes
+    -Builder - LOOK THIS UP, you ned a design plan before you attack the problem
+    -Observer
+    -Business delegate
+    -Back pressure
+    -mvc
+    -Front controller
+
+WOrking on a project
+Hardest thing to manage: Environment
+
+Jar vs War vs Ear
+
+Maven:
+-Clean
+-Default
+-Test
+
+BY MONDAY:
+    -Java expert!!
+    -Install Maven
+    -Install oracle sql developer
+    -Enthuware Practice test 1 OPA j8 808 or something
+
+3-tier project
+    -MVC
+    -Service layer does all the thinking
+    Unit testing
+        annotations, purposes, expeced, assert
+        unit - a single piece of code (typically a method)
+        -What are you testing?
+            -input
+            -output
+        Test Driven Development TDD
+            -Create design, test it
+            Process:
+                -Provide empty implementation
+                -Test to fail
+                -Define success
+                -code to success
+                -Test to succeed

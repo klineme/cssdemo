@@ -1,0 +1,42 @@
+Static blocks:
+    -Drivers
+
+
+Class Builder:
+    -Execute from top down
+        -Object gets created first (although static variables and static blocks really first)
+        -Constructor is last thing to run when creating classes
+
+Functional Programming Language
+    -Relies on functions to do everything
+    -Closure
+        Scopes within scopes
+        -Allowing scope of inner function to keep scope of outer function
+    -Lambdas apparently
+    -Self invocation
+Lambdas
+    -Basically changes very rapidly and doesn't have any binding ties
+    -Defining function in place
+    -ex: function(function(){})
+    -not:
+    var z = function(){}
+    function(z);
+    -In java: Anonymous Class, functional interfaces
+    ex:
+    Collections.sort(ints, (a, b) ->{
+        //Can just build a compare function
+    })
+    Good for instances when you don't need to reuse functionality
+
+Streams
+    Sequential - Item 1 to item N, straight order
+    Parallel - Breaks up collection somehow
+    Look up function interface
+
+Threads -- LOOK AT PPT
+    -Atomic Operations
+
+    how to:
+        Extend Thread, must override run
+        Implement Runnable, must override run
+        Memorize Thread States

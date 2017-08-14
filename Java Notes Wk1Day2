@@ -1,0 +1,54 @@
+Varargs:
+    -Array of unknown size in method argument list
+    -Must be last argument in list
+    -Can be treated like an array in method body
+
+While loops for indeterminant
+
+for(String n : s) n being the current element, s being the iterable collection
+
+Strings:
+    -Most important?!
+    -Object that represents collection of characters
+    -Immutable
+    -Strings created by literals stored in string pool
+    -Strings created using new keyword are stored in normal heap segment (Not reccomended)
+    -String pool reuses strings (internalizing strings)
+
+Stringbuilder and Stringbuffer
+    -Mutable strings
+    -Sringbuffer is synchronized
+    -add new methods to the string api
+
+Wrapper Classes
+    -Autoboxing primatives and Stuff
+SOMETHING I MISSED
+ - GO BACK OT PPT
+
+Exceptions
+    -Event in execution which deviate or interrupt from normal execution
+    -Handling:
+        -Checked Exceptions
+            -Must be Handled, try catch or throw
+        -Unchecked Exceptions
+            -Can be avoided, don't need to be handled
+
+STACK TRACE
+
+finally block -- interview
+
+
+Garbage Collection
+    - Remove objects from heap that no longer have any stack references
+    -Long running process (daemon thread)
+    - Starts when thhe first user thread is started by jvm
+    -Terminated when the last user thread terminates
+
+Types of Garbage Collectors: -Not suitable for server
+    -Serial Garbage COllector
+        -Freezes all user threads
+        -Scans each thread head sequentially
+    -Parallel Garbage COllector:
+        - Freezes too, but instead of sequentially, all in parallel
+    -Concurrent Mark Sweep Garbage Collector
+    -G1 Garbage Collector

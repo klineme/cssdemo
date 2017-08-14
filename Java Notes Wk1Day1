@@ -1,0 +1,74 @@
+Gitlab
+Slack
+Revature Pro
+Git
+JDK
+IDE (IntelliJ)
+WHy when where how?!
+
+Kafka?!
+
+Core Java!!!!!!!!!!!!:
+
+- Programming platform
+    Web app
+    standalone
+- Enterprise Systems
+- Fast, Reliable, secure
+- ADVANTAGES:
+    -JVM Java virtual machine
+    -Run anywhere
+- Regular Updates
+- 99% Object oriented
+    - Primatives
+- Easy to use and learn
+
+OOP: Describe each pillar without defining another one
+    Polymorphism: Objects and Methods in java can take different forms during different stages of execution
+        interface Runnable{}
+        class job implements Runnable{}
+        Job J= new Job();
+        Runnable R = new Job();
+    Encapsulation: Hiding data
+    Abstraction: Practice of hiding complexity through public API
+        - Public API exposure through
+            -interface
+            -abstract class
+    Inheritance:
+        -Gaining state or behavior from superclass or interface
+        - Inherited state
+        - inherited behavior
+
+Class vs Object
+    -Class is a blueprint, object is an instance
+    - OBJECT: INVOKE BEHAVIOR (new())
+
+Outerclass: File with class in it
+Inner Class: Class you define inside the outer class, inner class can use all of outer class.. But outer class may not be able to use inner
+
+Shadowing is when a local scope variable overrides a higher scope
+
+Go over scopes, also go over order of scopes:
+    -Class
+    -instance
+    -Method
+    -Parameter
+    -Block
+    -Local - Always taks precedence
+
+Control Statements in java
+    Logic Control if, else, switch
+    Loop Control
+
+
+Homework: Q1-Q6 tomorrow
+Banking App: Due Friday
+    - Java Console App
+    - Users can login/logout
+    - Users can view their balance
+    - Users view past transactions
+    - Users can withdraw money
+    - Users can deposit money
+    - App will throw at least 2 custom exceptions
+    - Takes input from command line
+    - Persistence

@@ -1,0 +1,40 @@
+Database: Collection of database
+-How do we store data?
+    -Columns and Rows
+        -Each row is an entry in table
+    Example: Customer table, employee table. Relate to Object
+        Customer: ID, name, purchase
+-Sublanguages:
+    -DML - INsert, Update, Delete
+    -DQL - Select -- Can be considered DML (Select * selects all columns)
+    -DDL - Create, Alter, Truncate, Drop - Drop destroys entire table, truncate removes all record but table in tact
+    -DLL - grant, revoke
+    -TCL - commit, rollback, savepoint
+    -Oracle SE2 free usage tier
+
+    endpoint: revorcl.czbtmu75lnhp.us-east-1.rds.amazonaws.com:1521
+
+-Types
+    -Number(4,2) - 4 total 2 decimals ex 10.00
+    -Varchar2(70) - string 70 characters
+    -Constraints
+        -Not Null
+        -Unique
+        -Primary Key -Unique Identifier on each row of a table
+        -Foreign Key - Ref to primary key of another table
+        -check
+
+        Many to one, many many, one one
+        -Many to many -- junction table
+p4sswrd
+        Normalization:
+            1NF -- The Key, Can't have a column with mutliple data
+            2NF -- Only the key, Everything in your table should depend on composite key
+            3NF -- NOthing but they key, transative functional dependencies
+    -Reverenial Integrity?!
+
+    -Group by function
+    -Order by
+
+    -Scalar Function: Each row individually, sin() log() abs() .. Look for string stuff
+    -Aggregate function: multiple rows : Sum()

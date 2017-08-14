@@ -29,6 +29,37 @@ window.ShoppingCart = (function(){
     function getCart(){ //Getter for the array
         return CartArray;
     }
+    function getWebCart(){ //Getter for the object from web api
+        var url = "http://localhost/restaurant/api/Cart";
+        var xhr2 = new XMLHttpRequest();
+        xhr2.onreadystatechange = function(){
+            if(xhr2.readyState == 4 && xhr2.status == 200){
+                var data = xhr2.responseText;
+
+                var obj = JSON.parse(data); //cartItems member is array
+                c.log(obj);
+                CartArray = [];
+                for(i = 0; i < obj.cartItems.length; i++){
+                    var found = false;
+                    for(j = 0; j < CartArray.length; j++){
+                        if(CartArray[j].Item == obj.cartItems[i].Item){
+                            CartArray[j].Quantity += obj.cartItems[i].Quantity;
+                            found = true;
+                        }
+                    }
+                    //Otherwise, if it is not found, push it
+                    if(!found)
+                        CartArray.push(obj.cartItems[i]);
+                }
+                c.log(CartArray);
+
+            }
+        }
+        xhr2.open("GET", url, false);
+        xhr2.send();
+
+        return CartArray;
+    }
     function removedish(dish){ //Searches for dish to remove
         for(i = 0; i < CartArray.length; i++){
             if(CartArray[i].Item == dish){
@@ -52,6 +83,7 @@ window.ShoppingCart = (function(){
         removeDish : removedish,
         calcTotal : calctotal,
         getCart : getCart,
+        getWebCart: getWebCart,
         addItem : addItem
     };
 })();

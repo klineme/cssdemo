@@ -18,11 +18,35 @@ window.Menu = (function(){
             var newPrice = (Math.ceil((Math.random()*10)+5)).toFixed(2);
             var newFoodItem = new foodItem(newDish, newPrice);
             lunchMenu.push(newFoodItem);
-            //c.log(newFoodItem);
         }
     }
     function getM(){
-        createMenu();
+        var url = "http://localhost/restaurant/api/Menu";
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                var data = xhr.responseText;
+
+                var obj = JSON.parse(data); //cartItems member is array
+                c.log(obj.menuItems);
+                lunchMenu = [];
+                for(i = 0; i < obj.menuItems.length; i++){
+                    var found = false;
+                    for(j = 0; j < lunchMenu.length; j++){
+                        if(lunchMenu[j].Item == obj.menuItems[i].Item){
+                            found = true;
+                        }
+                    }
+                    //Otherwise, if it is not found, push it
+                    if(!found)
+                        lunchMenu.push(obj.menuItems[i]);
+                }
+
+            }
+        }
+        xhr.open("GET", url, false);
+        xhr.send();
+        // createMenu();
         return lunchMenu;
     }
     function getmx(){

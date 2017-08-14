@@ -1,0 +1,67 @@
+OBJECT ORIENTED PROGRAMMING
+    -Polymorphism
+        - Objects and methods in java can take different forms during stages of execution
+        - Method Overloading
+        - Method overriding
+        - covariance
+            - subclass
+    -Encapsulation
+        -Typically said data hiding
+        -Private/protected data fields
+        -public getters setters
+    -Abstraction
+        -Hiding complexity
+            -Public API exposure
+            - Interface
+            - Abstract class
+    -Inheritance
+        -Means of gaining state or behavior from superclass
+            -Or interface
+        -Inherited state
+        -Inherited Behavior
+        -Can't inherit private stuff?
+        -Implicitly the first line in any constructor is the super
+
+    -INTERFACES
+        -Usually X-able
+        -Define behavior
+        -First non abstract class needs to implemment all abstract methods
+        -public
+        -Default keyword - java 8 feature
+
+    CASTING Objects
+        -Down casting is implicit (can always cast down)
+
+    Deadly Diamond - look up
+
+    SERIALIZATION
+        -Mechanism for writing object state to a byte stream
+
+        iInvalidClassException - serialVersionUID mismatch
+        NotserializableException - Class is not serializable
+        ClassNotFoundException - When reading, suitable class not found
+        -When serializing when an exception occurs all serialization is rolled back and the exception is written to file
+        public class whatever implements Serializable
+        -transient blocks serialization
+
+    COLLECTIONS FRAMEWORK - Understand Differences (methods and stuff)
+        -Iterable vs Inumerable
+            Iterable- compare/find by actual object
+            Inumerable- compare/find by a different value
+    GENERICS -- look it up
+
+    -HASHCODE AND EQUALS
+        -If you override equals you should override hashcode (vice versa)
+        -Comes from object class
+        Hashcode- Takes memory address and maps to int
+        Equals - compares memory location of two objects
+        - The Contract for collections
+        -Don't forget rules
+    -COMPARING OBJECTS -- NOT IN SLIDES
+        -Comparable
+            this is comparable to that
+                -CompareTo
+            natural ordering (A-z)(0-infinity)
+        -Comparator
+            -This operator compares
+                -compare

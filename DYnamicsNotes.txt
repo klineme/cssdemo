@@ -1,0 +1,72 @@
+Dynamics 365 Products
+CRM
+    -Manages customer data/interaction/whatever
+    -Modules:
+        -Marketing
+        -Customer service
+        -Sales
+ERP
+    -Dynamics abstracts a lot of .net development for you
+    -Commonly used stuff templates
+    -SAP?
+
+1.) Know what crm is
+2.) Know what CRM modules there are
+3.) Difference between CRM & ERP
+4.) Think of examples
+
+Customer can be either contact (person) or account (company)
+
+Entity - tables in sql, have two customer entities, contact, account
+
+Microsoft already has all this done for you, you can customize the entity if you want and use it.
+Take template and customize
+
+Deployment Options: --SAAS (Don't have to code), PAAS (SQL as a service, don't need to install sofware, AWS AZURE AS WELl), IAAS (AWS AZURE, vm lvl)
+Online (cloud): Outsourced to some company
+    - Pay for what you need
+    - Not as private
+    - Cloud Subscription
+    - Kept up to date - Automatic or select a time
+    - Per person/month Licencing
+    - Also have team member license -Limited functionality
+On premise: Server owned by company itself
+    - Huge Upfront cost
+    - More privacy
+    - One time purchase
+    - Rollup updates -- Manual
+    - CRM SERVER + Num users * CAL (client accesss licence) =  cost for license
+
+Sitemap -> Area -> Groups -> SubArea
+Form -> Tabs -> Sections -> Field
+PORTAL: https://portal.office.com
+MY INSTANCE: https://revtrainingmek.crm.dynamics.com/
+
+INTERVIEW Q: Explain _____ Module
+
+SALES MODULE:
+    -Lead - Expressed interest in product by customer
+    -Opportunity - 
+    -Quote
+    -Order
+    -Invoice
+    -Product Catalog
+
+    ssrs - sql server report service
+
+    Goal Management:
+        -Mainly for tracking performance of employees and progress
+        -Has time period
+
+MARKETING MODULE:
+
+    Marketing List-
+        -Contacts
+        -Accounts
+        -Leads
+        Campaign
+            -Campaign activity
+
+Quick campaign vs campaign?!?!!?!?!?!!?!?
+    -Quick campain, directly send bulk activities, campaign wizard
+    -Campaign needs to be input manually, more content, larger marketing process
